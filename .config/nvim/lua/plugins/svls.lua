@@ -10,8 +10,7 @@ return {
       servers = {
         svls = {
           root_dir = function(fname)
-            return require("lspconfig.util").root_pattern(".git")(fname)
-              or require("lspconfig.util").find_git_ancestor(fname)
+            return require("lspconfig.util").find_git_ancestor(fname)
           end,
           cmd = { "svls" },
           filetypes = { "verilog", "systemverilog" },
