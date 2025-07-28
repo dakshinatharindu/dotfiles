@@ -1,6 +1,0 @@
-[submodule ".oh-my-bash"]
-	path = .oh-my-bash
-	url = https://github.com/ohmybash/oh-my-bash.git
-[submodule ".nvm"]
-	path = .nvm
-	url = https://github.com/nvm-sh/nvm.git
