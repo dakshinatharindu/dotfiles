@@ -12,10 +12,17 @@ RUN usermod -aG sudo appuser
 # Set password for the user (optional - remove if not needed)
 RUN echo 'appuser:password' | chpasswd
 
+# Copy parent directory contents to appuser's home
+COPY ./ /home/appuser/
+
+# Change ownership of copied files to appuser
+RUN sudo chown -R appuser:appuser /home/appuser/
+
 # Switch to the new user
 USER appuser
 
 # Set working directory to user's home
 WORKDIR /home/appuser
+
 
 CMD ["/bin/bash"]
