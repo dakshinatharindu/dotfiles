@@ -24,3 +24,5 @@ _darcs
 ^/COPYING
 
 \.config
+\test_dir
+setup.sh
