@@ -1,0 +1,21 @@
+FROM ubuntu:latest
+
+# Update package list and install sudo
+RUN apt-get update && apt-get install -y sudo
+
+# Create a new user 'appuser' with home directory
+RUN useradd -m -s /bin/bash appuser
+
+# Add the user to the sudo group
+RUN usermod -aG sudo appuser
+
+# Set password for the user (optional - remove if not needed)
+RUN echo 'appuser:password' | chpasswd
+
+# Switch to the new user
+USER appuser
+
+# Set working directory to user's home
+WORKDIR /home/appuser
+
+CMD ["/bin/bash"]
