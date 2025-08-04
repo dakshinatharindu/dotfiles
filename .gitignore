@@ -1,1 +1,5 @@
 *.bak
+.config/nvim/README.md
+.config/nvim/LICENSE
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
