@@ -23,5 +23,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
+test_dir
 setup.sh
 [Dd]ockerfile
