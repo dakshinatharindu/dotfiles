@@ -3,3 +3,4 @@
 .config/nvim/LICENSE
 .config/nvim/lazy-lock.json
 .config/nvim/lazyvim.json
+nvim/.config/nvim/lazy-lock.json
